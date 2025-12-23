@@ -6,7 +6,7 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Careers from "./pages/Careers";
 import WhyChooseUs from "./pages/WhyChooseUs";
-import Contact from "./pages/Contact";
+
 import Insights from "./pages/Insights";
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/why-choose-us" element={<WhyChooseUs />} />
-          <Route path="/contact" element={<Contact />} />
+          {/* <Route path="/contact" element={<Contact />} /> */}
           <Route path="/insights" element={<Insights />} />
         </Routes>
       </div>

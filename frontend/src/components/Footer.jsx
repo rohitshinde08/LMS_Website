@@ -1,27 +1,69 @@
-import Hero from "../components/Hero";
+import { Link } from "react-router-dom";
 
-export default function Home() {
+export default function Footer() {
   return (
-    <main>
-      <Hero />
-
-      <section className="py-20 px-8 text-center">
-        <h3 className="text-3xl font-bold mb-6">Our Services</h3>
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          <div className="p-6 bg-white shadow rounded-lg">
-            <h4 className="font-semibold text-xl mb-3">Cloud Solutions</h4>
-            <p className="text-gray-600">Secure, scalable cloud engineering and deployments.</p>
-          </div>
-          <div className="p-6 bg-white shadow rounded-lg">
-            <h4 className="font-semibold text-xl mb-3">Web Development</h4>
-            <p className="text-gray-600">Modern web apps tailored to business needs.</p>
-          </div>
-          <div className="p-6 bg-white shadow rounded-lg">
-            <h4 className="font-semibold text-xl mb-3">App Development</h4>
-            <p className="text-gray-600">Cross-platform or native solutions for enterprises.</p>
-          </div>
+    <footer className="bg-slate-900 text-gray-300 py-12">
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+        
+        {/* Company Info */}
+        <div>
+          <h3 className="text-xl font-semibold text-white mb-3">
+            LM Software Solutions
+          </h3>
+          <p className="text-sm">
+            Engineering scalable, secure, and high-performance digital solutions
+            for modern businesses.
+          </p>
         </div>
-      </section>
-    </main>
+
+        {/* Navigation */}
+        <div>
+          <h4 className="text-lg font-semibold text-white mb-3">
+            Quick Links
+          </h4>
+          <ul className="space-y-2 text-sm">
+            <li>
+              <Link to="/" className="hover:text-white transition">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/services" className="hover:text-white transition">
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link to="/why-choose-us" className="hover:text-white transition">
+                Why Choose Us
+              </Link>
+            </li>
+            <li>
+              <Link to="/careers" className="hover:text-white transition">
+                Careers
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="hover:text-white transition">
+                About Us
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* Contact */}
+        <div>
+          <h4 className="text-lg font-semibold text-white mb-3">
+            Contact
+          </h4>
+          <p className="text-sm">Email: contact@lmsoftware.com</p>
+          <p className="text-sm">Location: India</p>
+        </div>
+
+      </div>
+
+      <div className="text-center text-sm text-gray-400 mt-10 border-t border-gray-700 pt-6">
+        © {new Date().getFullYear()} LM Software Solutions. All rights reserved.
+      </div>
+    </footer>
   );
 }
