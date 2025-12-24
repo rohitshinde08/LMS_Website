@@ -168,7 +168,7 @@ export default function About() {
 
               <textarea
                 rows="4"
-                placeholder="Your Message"
+                placeholder="Enter Message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 className="w-full border rounded-lg px-4 py-3"
