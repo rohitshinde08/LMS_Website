@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 /* =======================
    WHY WORK WITH US DATA
@@ -76,6 +77,50 @@ const cardVariants = {
    ======================= */
 const Careers = () => {
   const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    full_name: "",
+    email: "",
+    domain: "",
+    experience_level: "",
+  });
+  const [loading, setLoading] = useState(false);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const response = await fetch("http://127.0.0.1:8000/careers", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+      alert(data.message || "Thanks! We'll reach out soon.");
+
+      // Reset form
+      setFormData({
+        full_name: "",
+        email: "",
+        domain: "",
+        experience_level: "",
+      });
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="bg-gradient-to-b from-[#0B1220] via-[#0E1628] to-[#0B1220] text-white">
@@ -413,10 +458,7 @@ const Careers = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto grid md:grid-cols-2 gap-6 text-left relative z-10"
-            onSubmit={(e) => {
-              e.preventDefault();
-              alert("Thanks! We’ll notify you when a suitable role opens.");
-            }}
+            onSubmit={handleFormSubmit}
           >
             {/* Full Name */}
             <div>
@@ -425,6 +467,9 @@ const Careers = () => {
               </label>
               <input
                 type="text"
+                name="full_name"
+                value={formData.full_name}
+                onChange={handleInputChange}
                 required
                 placeholder="Your full name"
                 className="
@@ -445,6 +490,9 @@ const Careers = () => {
               </label>
               <input
                 type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
                 required
                 placeholder="you@example.com"
                 className="
@@ -464,6 +512,9 @@ const Careers = () => {
                 Preferred Domain
               </label>
               <select
+                name="domain"
+                value={formData.domain}
+                onChange={handleInputChange}
                 required
                 className="
             w-full px-4 py-3 rounded-lg
@@ -493,6 +544,9 @@ const Careers = () => {
                 Experience Level
               </label>
               <select
+                name="experience_level"
+                value={formData.experience_level}
+                onChange={handleInputChange}
                 required
                 className="
             w-full px-4 py-3 rounded-lg
@@ -517,6 +571,8 @@ const Careers = () => {
               <motion.button
                 whileHover={{ scale: 1.08 }}
                 whileTap={{ scale: 0.95 }}
+                type="submit"
+                disabled={loading}
                 className="
             px-12 py-4
             bg-blue-600 text-white
@@ -524,9 +580,10 @@ const Careers = () => {
             shadow-lg shadow-blue-600/30
             hover:bg-blue-700
             transition-all duration-300
+            disabled:opacity-50 disabled:cursor-not-allowed
           "
               >
-                Notify Me When a Role Opens
+                {loading ? "Submitting..." : "Notify Me When a Role Opens"}
               </motion.button>
             </div>
           </motion.form>
