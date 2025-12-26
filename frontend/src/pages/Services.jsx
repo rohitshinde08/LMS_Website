@@ -189,7 +189,7 @@ export default function Services() {
       </div>
 
       {/* ================= PROCESS ================= */}
-      <div className="bg-[#111827] py-16">
+      {/* <div className="bg-[#111827] py-16">
         <div className="max-w-7xl mx-auto px-6">
 
           <motion.h2
@@ -220,10 +220,10 @@ export default function Services() {
             transition-all
           "
               >
-                {/* subtle gradient overlay */}
+                {/* subtle gradient overlay 
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent pointer-events-none" />
 
-                {/* step number */}
+                {/* step number 
                 <div className="w-10 h-10 rounded-xl bg-blue-500/10
                           flex items-center justify-center
                           text-blue-400 font-bold mb-4">
@@ -245,7 +245,7 @@ export default function Services() {
           </div>
 
         </div>
-      </div>
+      </div> */}
 
 
       {/* ================= CTA ================= */}
