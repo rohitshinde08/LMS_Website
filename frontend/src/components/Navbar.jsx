@@ -52,9 +52,13 @@ export default function Navbar() {
           <NavLink to="/careers" className={navLinkClass}>
             Careers
           </NavLink>
+{/* 
+
           <NavLink to="/insights" className={navLinkClass}>
             Insights
-          </NavLink>
+          </NavLink> */}
+
+
         </div>
 
         {/* Mobile Menu Button */}

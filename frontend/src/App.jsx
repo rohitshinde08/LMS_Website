@@ -11,7 +11,7 @@ import JobDetails from "./pages/JobDetails";
 import WhyChooseUs from "./pages/WhyChooseUs";
 
 
-import Insights from "./pages/Insights";
+// import Insights from "./pages/Insights";
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
           <Route path="/careers/:jobId" element={<JobDetails />} />
           <Route path="/why-choose-us" element={<WhyChooseUs />} />
           {/* <Route path="/contact" element={<Contact />} /> */}
-          <Route path="/insights" element={<Insights />} />
+          {/* <Route path="/insights" element={<Insights />} /> */}
         </Routes>
       </div>
       <Footer />
