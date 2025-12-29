@@ -28,7 +28,7 @@ export default function Navbar() {
           <img
             src="/images/logo.png"
             alt="LMSoftware logo"
-            className="h-10 w-auto object-contain"
+            className="h-8 w-auto object-contain"
           />
           <span className="text-2xl text-gray-200 tracking-wide font-semibold">
             LMSoftware
@@ -43,22 +43,20 @@ export default function Navbar() {
           <NavLink to="/services" className={navLinkClass}>
             Services
           </NavLink>
-          <NavLink to="/why-choose-us" className={navLinkClass}>
+          {/* <NavLink to="/why-choose-us" className={navLinkClass}>
             Why Choose Us
-          </NavLink>
+          </NavLink> */}
           <NavLink to="/about" className={navLinkClass}>
             About
           </NavLink>
           <NavLink to="/careers" className={navLinkClass}>
             Careers
           </NavLink>
-{/* 
+          {/* 
 
           <NavLink to="/insights" className={navLinkClass}>
             Insights
           </NavLink> */}
-
-
         </div>
 
         {/* Mobile Menu Button */}

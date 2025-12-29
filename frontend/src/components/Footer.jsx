@@ -30,11 +30,6 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/why-choose-us" className="hover:text-white transition">
-                Why Choose Us
-              </Link>
-            </li>
-            <li>
               <Link to="/careers" className="hover:text-white transition">
                 Careers
               </Link>
