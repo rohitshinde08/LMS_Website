@@ -31,7 +31,7 @@ docker compose version
 # 1. Clone the Repository:
 ```bash
 git clone https://github.com/rohitshinde08/LMS_Website.git
-cd LMS_Website/LMSolutinS
+cd LMS_Website
 ```
 
 
