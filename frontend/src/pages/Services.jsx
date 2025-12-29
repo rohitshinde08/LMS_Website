@@ -188,66 +188,6 @@ export default function Services() {
         </div>
       </div>
 
-      {/* ================= PROCESS ================= */}
-      {/* <div className="bg-[#111827] py-16">
-        <div className="max-w-7xl mx-auto px-6">
-
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-bold text-white text-center mb-12"
-          >
-            Our Delivery Process
-          </motion.h2>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {steps.map((step, i) => (
-              <motion.div
-                key={step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                className="
-            relative
-            bg-[#0B1120]
-            border border-blue-500/10
-            rounded-2xl
-            p-6
-            overflow-hidden
-            hover:border-cyan-400/40
-            hover:shadow-[0_0_30px_rgba(34,211,238,0.15)]
-            transition-all
-          "
-              >
-                {/* subtle gradient overlay 
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent pointer-events-none" />
-
-                {/* step number 
-                <div className="w-10 h-10 rounded-xl bg-blue-500/10
-                          flex items-center justify-center
-                          text-blue-400 font-bold mb-4">
-                  {i + 1}
-                </div>
-
-                <h4 className="text-white font-semibold mb-2">
-                  {step}
-                </h4>
-
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  {i === 0 && "Understanding goals, scope, and technical requirements."}
-                  {i === 1 && "Designing scalable architecture and intuitive UX."}
-                  {i === 2 && "Building, testing, and refining the solution."}
-                  {i === 3 && "Deployment, monitoring, and long-term support."}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-
-        </div>
-      </div> */}
-
-
       {/* ================= CTA ================= */}
       <div className="bg-gradient-to-br from-blue-600/10 via-transparent to-indigo-600/10 py-24">
         <div className="max-w-7xl mx-auto px-6">

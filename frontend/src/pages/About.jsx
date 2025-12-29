@@ -21,6 +21,33 @@ export default function About() {
     },
   ];
 
+  const reasons = [
+    {
+      title: "Engineering Excellence",
+      desc: "We build scalable, secure, and high-performance solutions using modern architectures.",
+    },
+    {
+      title: "Modern Technology Stack",
+      desc: "React, FastAPI, Cloud, DevOps, and AI — we use technologies that scale with your business.",
+    },
+    {
+      title: "Client-First Approach",
+      desc: "We work as your technology partner, not just a service provider.",
+    },
+    {
+      title: "Agile & Transparent Process",
+      desc: "Clear communication, fast iterations, and complete visibility throughout development.",
+    },
+    {
+      title: "Security & Reliability",
+      desc: "Best practices in authentication, data protection, and infrastructure security.",
+    },
+    {
+      title: "Long-Term Support",
+      desc: "From idea to deployment and beyond — we support your growth journey.",
+    },
+  ];
+
   /* ================= FORM STATE ================= */
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -93,12 +120,12 @@ export default function About() {
             {/* ===== DESCRIPTION ===== */}
             <p
               className="
-          max-w-3xl mx-auto
-          leading-relaxed text-lg mb-16
-          text-gray-400
-          transition-all duration-300 ease-out
-          hover:text-white
-        "
+              max-w-3xl mx-auto
+              leading-relaxed text-lg mb-16
+              text-gray-400
+              transition-all duration-300 ease-out
+              hover:text-white
+            "
             >
               We are a software development company focused on delivering
               high-quality, scalable, and secure digital solutions that help
@@ -173,8 +200,84 @@ export default function About() {
       `}</style>
       </section>
 
+      {/* ================= WHY CHOOSE US (UPDATED EFFECTS) ================= */}
+      <section className="relative bg-white text-gray-800 py-10 px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          {/* Heading */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            viewport={{ once: true }}
+            className="
+                relative inline-block
+                text-4xl md:text-6xl font-bold text-center mb-6 leading-tight
+                after:content-['']
+                after:absolute after:left-1/2 after:-bottom-2
+                after:-translate-x-1/2
+                after:h-[3px] after:w-0
+                after:bg-blue-500
+                after:transition-all after:duration-300
+                hover:after:w-full
+              "
+          >
+            Why Choose <span className="text-blue-500">Us ?</span>
+          </motion.h1>
+          <p className="mt-4 mb-6 text-gray-600 max-w-3xl mx-auto">
+            We combine engineering expertise, modern technology, and a
+            business-driven mindset to deliver solutions that truly make an
+            impact.
+          </p>
+          {/* Cards */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {reasons.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="
+                  group
+                  bg-white
+                  rounded-2xl p-8
+                  border border-gray-400
+                  transition-all duration-300
+                  hover:border-cyan-500/50
+                  hover:shadow-[0_12px_28px_rgba(37,99,235,0.12)]
+                "
+              >
+                <h3
+                  className="
+                    relative inline-block
+                    text-xl font-semibold text-gray-900 mb-3
+                    after:content-['']
+                    after:absolute after:left-0 after:-bottom-1
+                    after:h-[2px] after:w-0
+                    after:bg-blue-600
+                    after:transition-all after:duration-300
+                    group-hover:after:w-full
+                  "
+                >
+                  {item.title}
+                </h3>
+
+                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ================= CONTACT SECTION ================= */}
-      <section id="contact" className="px-6 md:px-8 py-20 bg-gray-50">
+      <section
+        id="contact"
+        className="px-6 md:px-8 py-16 bg-[#0B1120] text-gray-200"
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -192,7 +295,7 @@ export default function About() {
               className="
                 relative inline-block
                 text-4xl md:text-6xl font-bold text-center mb-6 leading-tight
-
+                text-white 
                 after:content-['']
                 after:absolute after:left-1/2 after:-bottom-2
                 after:-translate-x-1/2
@@ -210,7 +313,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-center text-gray-600 max-w-2xl mx-auto mb-16"
+            className="text-center text-gray-400 max-w-2xl mx-auto mb-16"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Reach out
             to us for business inquiries, partnerships, or technical support.
@@ -224,7 +327,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-white p-8 rounded-xl shadow text-center animate-card-highlight"
+              className="bg-[#111827]  p-8 rounded-xl border border-blue-500/10 text-center animate-card-highlight"
             >
               <div className="inline-block animate-icon-shake">
                 <svg
@@ -233,7 +336,7 @@ export default function About() {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-12 h-12 text-blue-600 mb-4"
+                  className="w-12 h-12 text-blue-500 mb-4"
                 >
                   <path
                     strokeLinecap="round"
@@ -250,8 +353,10 @@ export default function About() {
                 </svg>
               </div>
 
-              <h3 className="text-lg font-semibold mb-2">Our Office</h3>
-              <p className="text-gray-600 text-sm">Pune, Maharashtra, India</p>
+              <h3 className="text-lg font-semibold mb-2 text-white">
+                Our Office
+              </h3>
+              <p className="text-gray-400 text-sm">Pune, Maharashtra, India</p>
             </motion.div>
 
             {/* -------- Email -------- */}
@@ -260,7 +365,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-white p-8 rounded-xl shadow text-center animate-card-highlight delay-1"
+              className="bg-[#111827] p-8 rounded-xl border border-blue-500/10 text-center animate-card-highlight delay-1"
             >
               <div className="inline-block animate-icon-shake delay-1">
                 <svg
@@ -285,8 +390,10 @@ export default function About() {
                 </svg>
               </div>
 
-              <h3 className="text-lg font-semibold mb-2">Email Us</h3>
-              <p className="text-gray-600 text-sm">contact@yourcompany.com</p>
+              <h3 className="text-lg font-semibold mb-2 text-white">
+                Email Us
+              </h3>
+              <p className="text-gray-400 text-sm">contact@yourcompany.com</p>
             </motion.div>
 
             {/* -------- Phone -------- */}
@@ -295,7 +402,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
               viewport={{ once: true }}
-              className="bg-white p-8 rounded-xl shadow text-center animate-card-highlight delay-2"
+              className="bg-[#111827] p-8 rounded-xl border border-blue-500/10 text-center animate-card-highlight delay-2"
             >
               <div className="inline-block animate-icon-shake delay-2">
                 <svg
@@ -322,8 +429,8 @@ export default function About() {
                 </svg>
               </div>
 
-              <h3 className="text-lg font-semibold mb-2">Call Us</h3>
-              <p className="text-gray-600 text-sm">+91 98765 43210</p>
+              <h3 className="text-lg font-semibold mb-2 text-white">Call Us</h3>
+              <p className="text-gray-400 text-sm">+91 98765 43210</p>
             </motion.div>
           </div>
 
@@ -331,16 +438,31 @@ export default function About() {
             {/* ================= FORM ================= */}
             <motion.form
               onSubmit={handleSubmit}
-              className="bg-white p-10 rounded-xl shadow space-y-6"
+              whileHover={{ y: -8 }}
+              transition={{ type: "spring", stiffness: 120 }}
+              className="
+                relative overflow-hidden
+                bg-gradient-to-br from-white/5 to-white/0
+                border border-white/10
+                rounded-2xl
+                p-10
+                space-y-6
+                text-center
+                hover:border-blue-600/60
+                hover:shadow-[0_0_50px_rgba(59,130,246,0.25)]
+                transition-all duration-500
+              "
             >
-              <h3 className="text-xl font-semibold">Send Us a Message</h3>
+              <h3 className="text-xl font-semibold text-white">
+                Send Us a Message
+              </h3>
 
               <input
                 type="text"
                 placeholder="Full Name"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                className="w-full border rounded-lg px-4 py-3"
+                className="w-full bg-[#0B1120] border border-gray-700 rounded-lg px-4 py-3 text-gray-200"
               />
 
               <input
@@ -348,7 +470,7 @@ export default function About() {
                 placeholder="Email Address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full border rounded-lg px-4 py-3"
+                className="w-full bg-[#0B1120] border border-gray-700 rounded-lg px-4 py-3 text-gray-200"
               />
 
               <textarea
@@ -356,7 +478,7 @@ export default function About() {
                 placeholder="Enter Message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                className="w-full border rounded-lg px-4 py-3"
+                className="w-full bg-[#0B1120] border border-gray-700 rounded-lg px-4 py-3 text-gray-200"
               />
 
               <button
@@ -369,8 +491,24 @@ export default function About() {
             </motion.form>
 
             {/* ================= MAP ================= */}
-            <motion.div className="bg-white p-8 rounded-xl shadow">
-              <h3 className="text-xl font-semibold mb-4">Visit Our Office</h3>
+            <motion.div
+              whileHover={{ y: -8 }}
+              transition={{ type: "spring", stiffness: 120 }}
+              className="
+              relative overflow-hidden
+              bg-gradient-to-br from-white/5 to-white/0
+              border border-white/10
+              rounded-2xl
+              p-8
+              text-center
+              hover:border-blue-600/60
+              hover:shadow-[0_0_50px_rgba(59,130,246,0.25)]
+              transition-all duration-500
+            "
+            >
+              <h3 className="text-xl font-semibold mb-4 text-white">
+                Visit Our Office
+              </h3>
               <iframe
                 title="Office Location"
                 src="https://www.google.com/maps?q=Pune,Maharashtra&output=embed"
@@ -407,14 +545,13 @@ export default function About() {
 
           /* CARD BACKGROUND */
           @keyframes cardHighlight {
-            0%, 75%, 100% {
-              background-color: white;
-            }
-            78%, 86% {
-              background-color: #eff6ff;
-            }
+          0%, 100% {
+            background-color: #111827;
           }
-
+          50% {
+            background-color: #0f172a;
+          }
+         }
           .animate-card-highlight {
             animation: cardHighlight 3s ease-in-out infinite;
           }
