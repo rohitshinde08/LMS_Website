@@ -108,13 +108,13 @@ export default function Navbar() {
           >
             Careers
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/insights"
             className={navLinkClass}
             onClick={() => setOpen(false)}
           >
             Insights
-          </NavLink>
+          </NavLink> */}
         </div>
       )}
     </nav>
