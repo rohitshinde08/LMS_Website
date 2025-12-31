@@ -81,75 +81,75 @@ function FAQItem({ item, index }) {
 }
 
 /* ================= DEVELOPMENT PROCESS DATA ================= */
-const processVariants = {
-  left: {
-    hidden: { opacity: 0, x: -80, scale: 0.95 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      scale: 1,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  },
-  right: {
-    hidden: { opacity: 0, x: 80, scale: 0.95 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      scale: 1,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  },
-};
+// const processVariants = {
+//   left: {
+//     hidden: { opacity: 0, x: -80, scale: 0.95 },
+//     visible: {
+//       opacity: 1,
+//       x: 0,
+//       scale: 1,
+//       transition: { duration: 0.6, ease: "easeOut" },
+//     },
+//   },
+//   right: {
+//     hidden: { opacity: 0, x: 80, scale: 0.95 },
+//     visible: {
+//       opacity: 1,
+//       x: 0,
+//       scale: 1,
+//       transition: { duration: 0.6, ease: "easeOut" },
+//     },
+//   },
+// };
 
-const processSteps = [
-  {
-    title: "Requirement Analysis",
-    description: "We understand business goals, user needs, and constraints.",
-    image: reqImg,
-  },
-  {
-    title: "Design & Architecture",
-    description: "We design scalable architecture along with intuitive UI/UX.",
-    image: designImg,
-  },
-  {
-    title: "Development & Testing",
-    description:
-      "Agile coding methods with continuous testing for high quality.",
-    image: devImg,
-  },
-  {
-    title: "Deployment & Support",
-    description: "We deploy, monitor, and maintain your product's performance.",
-    image: deployImg,
-  },
-];
-const timelineContainerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.4, // LEFT → RIGHT delay
-    },
-  },
-};
+// const processSteps = [
+//   {
+//     title: "Requirement Analysis",
+//     description: "We understand business goals, user needs, and constraints.",
+//     image: reqImg,
+//   },
+//   {
+//     title: "Design & Architecture",
+//     description: "We design scalable architecture along with intuitive UI/UX.",
+//     image: designImg,
+//   },
+//   {
+//     title: "Development & Testing",
+//     description:
+//       "Agile coding methods with continuous testing for high quality.",
+//     image: devImg,
+//   },
+//   {
+//     title: "Deployment & Support",
+//     description: "We deploy, monitor, and maintain your product's performance.",
+//     image: deployImg,
+//   },
+// ];
+// const timelineContainerVariants = {
+//   hidden: {},
+//   visible: {
+//     transition: {
+//       staggerChildren: 0.4, // LEFT → RIGHT delay
+//     },
+//   },
+// };
 
-const timelineItemVariants = {
-  hidden: {
-    opacity: 0,
-    y: 40,
-    scale: 0.96,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut",
-    },
-  },
-};
+// const timelineItemVariants = {
+//   hidden: {
+//     opacity: 0,
+//     y: 40,
+//     scale: 0.96,
+//   },
+//   visible: {
+//     opacity: 1,
+//     y: 0,
+//     scale: 1,
+//     transition: {
+//       duration: 0.6,
+//       ease: "easeOut",
+//     },
+//   },
+// };
 
 /* ================= HOME PAGE ================= */
 export default function Home() {
@@ -162,9 +162,11 @@ export default function Home() {
           loop
           muted
           playsInline
+          preload="metadata"
+          poster="/hero-poster.jpg"
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/animation.mp4" type="video/mp4" />
+          <source src="/animation.webm" type="video/webm" />
         </video>
 
         <div className="absolute inset-0 bg-[#0B1120]/80"></div>
@@ -247,7 +249,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* ================= PROCESS – NEW BANNER STYLE ================= */}
+      {/* ================= PROCESS – NEW BANNER STYLE =================
       <section className="bg-[#F8FAFC] py-8">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-24">
@@ -321,7 +323,7 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* ================= FAQ ================= */}
       {/* ================= FAQ ================= */}
       <section className="bg-[#F8FAFC] py-10">

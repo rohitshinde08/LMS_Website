@@ -315,8 +315,7 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center text-gray-400 max-w-2xl mx-auto mb-16"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Reach out
-            to us for business inquiries, partnerships, or technical support.
+          Get in touch with us for business inquiries, partnerships, or technical support. Our team is here to assist you and will respond promptly.
           </motion.p>
 
           {/* ================= CONTACT CARDS ================= */}
@@ -430,7 +429,7 @@ export default function About() {
               </div>
 
               <h3 className="text-lg font-semibold mb-2 text-white">Call Us</h3>
-              <p className="text-gray-400 text-sm">+91 98765 43210</p>
+              <p className="text-gray-400 text-sm">+91 90758 07826</p>
             </motion.div>
           </div>
 
