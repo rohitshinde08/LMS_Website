@@ -134,7 +134,7 @@ const handleSubmit = async (e) => {
     formDataToSend.append("resume", formData.resume);
 
     await axios.post(
-      "http://127.0.0.1:8000/jobs/apply",
+      "/api/jobs/apply",
       formDataToSend,
       {
         headers: {
