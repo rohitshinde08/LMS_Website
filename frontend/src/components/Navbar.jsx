@@ -87,13 +87,13 @@ export default function Navbar() {
           >
             Services
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/why-choose-us"
             className={navLinkClass}
             onClick={() => setOpen(false)}
           >
             Why Choose Us
-          </NavLink>
+          </NavLink> */}
           <NavLink
             to="/about"
             className={navLinkClass}

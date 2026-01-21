@@ -45,22 +45,16 @@ const services = [
     points: ["Scalable Architecture", "Secure APIs", "Modern Frameworks"],
   },
   {
-    title: "Backend & Databases",
-    desc: "Robust APIs, databases, and system architecture built for scale.",
-    icon: HiOutlineServer,
-    points: ["High-Performance APIs", "Optimized Databases", "System Design"],
-  },
-  {
     title: "Cloud Platforms",
     desc: "AWS, Azure & GCP solutions with cloud-native best practices.",
     icon: HiOutlineCloud,
     points: ["Cloud-Native Design", "High Availability", "Cost Optimization"],
   },
   {
-    title: "Mobile App Development",
-    desc: "High-performance Android & iOS apps with seamless UX.",
-    icon: HiOutlineDeviceMobile,
-    points: ["iOS & Android", "Cross-Platform Apps", "Performance Focused"],
+    title: "DevOps & Infrastructure",
+    desc: "CI/CD pipelines, monitoring, and reliable cloud infrastructure.",
+    icon: HiOutlineCog,
+    points: ["CI/CD Pipelines", "Monitoring & Logs", "Infrastructure as Code"],
   },
   {
     title: "AI & Automation",
@@ -69,11 +63,17 @@ const services = [
     points: ["Workflow Automation", "AI Integrations", "Smart Analytics"],
   },
   {
-    title: "DevOps & Infrastructure",
-    desc: "CI/CD pipelines, monitoring, and reliable cloud infrastructure.",
-    icon: HiOutlineCog,
-    points: ["CI/CD Pipelines", "Monitoring & Logs", "Infrastructure as Code"],
+    title: "Mobile App Development",
+    desc: "High-performance Android & iOS apps with seamless UX.",
+    icon: HiOutlineDeviceMobile,
+    points: ["iOS & Android", "Cross-Platform Apps", "Performance Focused"],
   },
+  {
+    title: "Backend & Databases",
+    desc: "Robust APIs, databases, and system architecture built for scale.",
+    icon: HiOutlineServer,
+    points: ["High-Performance APIs", "Optimized Databases", "System Design"],
+  }
 ];
 
 
