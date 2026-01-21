@@ -42,7 +42,7 @@ copy .env.example .env
 
 # 3. Run the Project
 ```
-docker compose -f docker-compose.local.yml up --build
+docker compose up --build
 ```
 
 
